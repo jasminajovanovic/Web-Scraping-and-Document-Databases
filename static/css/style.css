@@ -1,0 +1,31 @@
+
+.myborder{
+  border: 1px double #d5d4d4;
+  border-radius: 5px;
+}
+
+.myimage{
+  width: 90%;
+  height: 90%;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+heading {
+  font-weight: bold;
+}
+
+.myborder{
+  border: 1px double #d5d4d4;
+  border-radius: 5px;
+}
+
+.centered{
+  text-align: center;
+}
+
+.row{
+  margin-top: 15px;
+}

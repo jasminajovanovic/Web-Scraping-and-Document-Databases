@@ -1,12 +1,14 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import mission_to_mars
+# import pandas as pd
 
 app = Flask(__name__)
 
 # Use flask_pymongo to set up mongo connection
 app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 mongo = PyMongo(app)
+
 
 @app.route("/")
 def index():
@@ -29,7 +31,7 @@ def scraper():
     db.mars_data.insert_one(marsDict)
 
     # browser.quit()
-    return render_template("index.html", items=marsDict)
+    return render_template("index.html", items=marsDict, image_urls=marsDict['hemisphere_imgs'])
 
 
 if __name__ == "__main__":

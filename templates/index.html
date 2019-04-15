@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mars Mission</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
 </head>
 
 <body>
@@ -18,16 +19,42 @@
     </div>
 
     <!-- Craigslist Listings -->
-    <div class="row" id="mars_items">
-      <div class="col-md-12">
-        <h2 class="heading"><strong>Latest Mars News</strong></h2>
-        <h3>{{ items.news_title }}</h3>
-        <h4>{{ items.news_p }}</h4>
-        <h2 class="heading"><strong>Featured Mars Image</strong></h2>
-        <img src="{{ items.featured_img_url }}" alt="featured mars image">
+    <div class="row" id="mars_news">
+      <div class="col-xs-12">
+        <h3 class="heading">Latest Mars News</h3>
+        <h4 class="heading">{{ items.news_title }}</h4>
+        <p>{{ items.news_p }}</p>
       </div>
     </div>
-
+    <div class="row">
+      <div class='col-xs-8'>
+        <h3 class="heading">Featured Mars Image</h3>
+        <img src="{{ items.featured_img_url }}" alt="featured mars image" class="myimage">
+      </div>
+      <div class='col-xs-4'>
+        <div class="row" class="myborder">
+          <h3 class="heading">Current Weather on Mars</h3>
+          <p>{{ items.mars_weather }}</p>
+          <p></p>
+        </div>
+        <div class="row">
+          <h3 class="heading">Mars Facts</h3>
+          {{ items.table|safe }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for hemisphere_dict in image_urls %}
+      <div class="col-xs-6">
+        <div class="box">
+          <div class="centered">
+            <img src="{{ hemisphere_dict.img_url }}" alt="{{ hemisphere_dict.title }}" class="myimage">
+            <h4>{{ hemisphere_dict.title }} </h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </body>
 
