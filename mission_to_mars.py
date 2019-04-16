@@ -3,6 +3,9 @@ from splinter import Browser
 from bs4 import BeautifulSoup
 import pandas as pd
 
+# todo: adsd sleep?
+# todo: test / route
+
 url_list = ['https://mars.nasa.gov/news/',
             'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars',
             'https://twitter.com/marswxreport?lang=en',

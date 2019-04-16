@@ -12,8 +12,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    items = mongo.db.mars_data.find()
-    return render_template("index.html", items=items)
+    return redirect("/scrape", code=302)
 
 
 @app.route("/scrape")

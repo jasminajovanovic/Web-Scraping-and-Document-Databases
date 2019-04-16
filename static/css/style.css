@@ -1,7 +1,9 @@
 
-.myborder{
-  border: 1px double #d5d4d4;
+.myborder {
+  border-style: solid;
+  border-color: #d5d4d4;
   border-radius: 5px;
+  padding-right: 10px;
 }
 
 .myimage{
@@ -13,19 +15,10 @@
   font-weight: bold;
 }
 
+.row {
+  margin-top: 15px;
+}
+
 heading {
   font-weight: bold;
-}
-
-.myborder{
-  border: 1px double #d5d4d4;
-  border-radius: 5px;
-}
-
-.centered{
-  text-align: center;
-}
-
-.row{
-  margin-top: 15px;
 }
