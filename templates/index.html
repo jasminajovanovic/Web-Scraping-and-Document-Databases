@@ -47,14 +47,25 @@
     </div>
     <div class="row">
       {% for hemisphere_dict in image_urls %}
+
       <div class="col-xs-6">
+        <div class="card myborder" style="width: 38rem;">
+          <img class="card-img-top myimage" src="{{ hemisphere_dict.img_url }}" alt="{{ hemisphere_dict.title }}``">
+          <div class="card-body">
+            <h5 class="card-title">{{ hemisphere_dict.title }}</h5>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="col-xs-6">
         <div class="box">
           <div class="text-center">
             <img src="{{ hemisphere_dict.img_url }}" alt="{{ hemisphere_dict.title }}" class="myimage">
             <h4>{{ hemisphere_dict.title }} </h4>
           </div>
         </div>
-      </div>
+      </div> -->
       {% endfor %}
     </div>
   </div>
