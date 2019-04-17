@@ -27,11 +27,11 @@
       </div>
     </div>
     <div class="row">
-      <div class='col-xs-8'>
+      <div class="col-xs-12 col-md-8">
         <h3 class="heading">Featured Mars Image</h3>
         <img src="{{ items.featured_img_url }}" alt="featured mars image" class="myimage">
       </div>
-      <div class='col-xs-4'>
+      <div class="col-xs-12 col-md-4">
         <div class="row">
           <div class="myborder">
             <h3 class="heading">Current Weather on Mars</h3>
@@ -48,7 +48,7 @@
     <div class="row">
       {% for hemisphere_dict in image_urls %}
 
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-md-6">
         <div class="card myborder" style="width: 38rem;">
           <img class="card-img-top myimage" src="{{ hemisphere_dict.img_url }}" alt="{{ hemisphere_dict.title }}``">
           <div class="card-body">
